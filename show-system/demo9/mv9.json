@@ -1,0 +1,299 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "Interface": [
+    {
+      "transform": {
+        "data": {
+          "url": "us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        }
+      },
+      "title": "Number of strikes by state",
+      "projection": {
+        "type": "albersUsa"
+      },
+      "ViewType": {
+        "type": "geoshape"
+      },
+      "Encoding": {
+        "url": "./demo9/csv/map.csv",
+        "color": {
+          "field":"Number",
+          "datum": "quantitative",
+          "scale": {
+            "range": ["#fed976","#e31a1c"]
+          },
+          "legend": {
+            "title": null
+          }
+        }
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.2,
+          "y": 0.185185
+        },
+        "Size": {
+          "width": 0.4,
+          "height": 0.370370
+        }
+      }
+    },
+    {
+      "title": "Number of strikes trend",
+      "Encoding": {
+        "url": "./demo9/csv/area-1.csv",
+        "x": {
+          "field": "Date",
+          "datum": "temporal"
+        },
+        "y": {
+          "field": "Strikes",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        }
+      },
+      "ViewType": {
+        "type": "area",
+        "color": "#1f77b4"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.7,
+          "y": 0.0925925
+        },
+        "Size": {
+          "width": 0.6,
+          "height": 0.185185
+        }
+      }
+    },
+    {
+      "title": "Cost yearly trend",
+      "Encoding": {
+        "url": "./demo9/csv/area-2.csv",
+        "x": {
+          "field": "Date",
+          "datum": "temporal"
+        },
+        "y": {
+          "field": "Cost",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        }
+      },
+      "ViewType": {
+        "type": "area",
+        "color": "#1f77b4"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.7,
+          "y": 0.2777775
+        },
+        "Size": {
+          "width": 0.6,
+          "height": 0.185185
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "./demo9/csv/pie-1.csv",
+        "theta": {
+          "field": "number",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Time of Day",
+          "datum": "nominal",
+          "scale": {
+            "range": [
+              "#ffff99",
+              "#a6cee3",
+              "#fdc086",
+              "#beaed4"
+            ]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "arc"
+      },
+      "layer": [
+        {
+          "ViewType": {
+            "type": "arc"
+          }
+        },
+        {
+          "ViewType": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {
+              "field": "text",
+              "datum": "nominal"
+            }
+          }
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.166665,
+          "y": 0.5185185
+        },
+        "Size": {
+          "width": 0.33333,
+          "height": 0.296296
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "./demo9/csv/pie-2.csv",
+        "theta": {
+          "field": "number",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Animal",
+          "datum": "nominal",
+          "scale": {
+            "range": [
+              "#439894",
+              "#cc4c02"
+            ]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "arc"
+      },
+      "layer": [
+        {
+          "ViewType": {
+            "type": "arc"
+          }
+        },
+        {
+          "ViewType": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {
+              "field": "text",
+              "datum": "nominal"
+            }
+          }
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.499995,
+          "y": 0.5185185
+        },
+        "Size": {
+          "width": 0.33333,
+          "height": 0.296296
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "./demo9/csv/pie-3.csv",
+        "theta": {
+          "field": "number",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Phase of Flight",
+          "datum": "nominal",
+          "scale": {
+            "range": [
+              "#4c78a8",
+              "#f58518",
+              "#e45756",
+              "#b279a2",
+              "#54a24b"
+            ]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "arc"
+      },
+      "layer": [
+        {
+          "ViewType": {
+            "type": "arc"
+          }
+        },
+        {
+          "ViewType": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {
+              "field": "text",
+              "datum": "nominal"
+            }
+          }
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.833325,
+          "y": 0.5185185
+        },
+        "Size": {
+          "width": 0.33334,
+          "height": 0.296296
+        }
+      }
+    },
+    {
+      "title": "Top 20 airports in strikes",
+      "Encoding": {
+        "url": "./demo9/csv/bar.csv",
+        "x": {
+          "field": "Airport",
+          "datum": "nominal",
+          "sort": "-y"
+        },
+        "y": {
+          "field": "Strikes",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "size": 80,
+        "color": "#999999"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.83335
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.3333
+        }
+      }
+    }
+  ]
+}

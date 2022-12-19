@@ -1,0 +1,182 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 768,
+      "height": 2618
+    }
+  },
+  "Interface": [
+    {
+      "Encoding":[
+        {
+          "projection": {
+            "type":"equirectangular"
+          },
+          "url": "country-110m.json",
+          "feature": "countries"
+        },
+        {
+          "url": "json_data/demo2/map.csv",
+          "x": {
+            "field": "Long",
+            "datum": "quantitative"
+          },
+          "y": {
+            "field": "Lat",
+            "datum": "quantitative"
+          },
+          "color":{
+            "field":"average IMDb",
+            "datum": "quantitative",
+            "scale": ["#00cc99","#ff3300"]
+          }
+        }
+      ],
+      "ViewType": [
+        {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        },
+        {
+          "type": "circle"
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.073338
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.146676
+        }
+      }
+    },
+    {
+      "title": "Netflix",
+      "Encoding": {
+        "url": "json_data/demo2/barchart_1.csv",
+        "x": {
+          "field": "Age",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Movie number(K)",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Age",
+          "datum": "nominal"
+        }
+      },
+      "ViewType": {
+        "type": "bar"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.2533422
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.21333
+        }
+      }
+    },
+    {
+      "title": "Hulu",
+      "Encoding": {
+        "url": "json_data/demo2/barchart_2.csv",
+        "x": {
+          "field": "Age",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Movie number(K)",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Age",
+          "datum": "nominal"
+        }
+      },
+      "ViewType": {
+        "type": "bar"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.46667
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.21333
+        }
+      }
+    },
+    {
+      "title": "Disney+",
+      "Encoding": {
+        "url": "json_data/demo2/barchart_3.csv",
+        "x": {
+          "field": "Age",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Movie number(K)",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Age",
+          "datum": "nominal"
+        }
+      },
+      "ViewType": {
+        "type": "bar"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.68
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.21333
+        }
+      }
+    },
+    {
+      "title": "Prime Video",
+      "Encoding": {
+        "url": "json_data/demo2/barchart_4.csv",
+        "x": {
+          "field": "Age",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Movie number(K)",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Age",
+          "datum": "nominal"
+        }
+      },
+      "ViewType": {
+        "type": "bar"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.89333
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.21333
+        }
+      }
+    }
+  ]
+}

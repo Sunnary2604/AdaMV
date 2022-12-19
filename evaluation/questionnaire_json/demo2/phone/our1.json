@@ -1,0 +1,58 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 375,
+      "height": 667
+    }
+  },
+  "Interface": [
+    {
+      "Encoding":[
+        {
+          "projection": {
+            "type":"equirectangular"
+          },
+          "url": "country-110m.json",
+          "feature": "countries"
+        },
+        {
+          "url": "json_data/demo2/map.csv",
+          "x": {
+            "field": "Long",
+            "datum": "quantitative"
+          },
+          "y": {
+            "field": "Lat",
+            "datum": "quantitative"
+          },
+          "color":{
+            "field":"average IMDb",
+            "datum": "quantitative",
+            "scale": ["#00cc99","#ff3300"]
+          }
+        }
+      ],
+      "ViewType": [
+        {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        },
+        {
+          "type": "circle"
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 1,
+          "height": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 375,
+      "height": 667
+    }
+  },
+  "Interface": [
+    {
+      "Encoding": {
+        "url": "json_data/demo4/bar.csv",
+        "x": {
+          "field": "Country",
+          "datum": "nominal",
+          "sort": "-y"
+        },
+        "y": {
+          "field": "Medal Count",
+          "datum": "quantitative"
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "color": "#675193"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 1,
+          "height": 1
+        }
+      }
+    }
+  ]
+}

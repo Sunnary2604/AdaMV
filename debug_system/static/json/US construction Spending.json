@@ -1,0 +1,227 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "Interface": [
+    {
+      "title": "Category Spending",
+      "Encoding": {
+        "url": "../static/data/demo8/bar-2.csv",
+        "y": {
+          "field": "number",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        },
+        "x": {
+          "field": "Category",
+          "datum": "nominal",
+          "sort": "-y"
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "color": "#e41a1c",
+        "size": 5
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.1197917,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 0.239583,
+          "height": 1
+        }
+      }
+    },
+    {
+      "title": "Residential VS Nonresidential",
+      "Encoding": {
+        "url": "../static/data/demo8/pie.csv",
+        "theta": {
+          "field": "number",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Category",
+          "datum": "nominal",
+          "legend": {
+            "title": null
+          },
+          "scale": {
+            "range": ["#b279a2","#4c78a8"]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "arc"
+      },
+      "layer": [
+        {
+          "ViewType": {
+            "type": "arc"
+          }
+        },
+        {
+          "ViewType": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {
+              "field": "text",
+              "datum": "nominal"
+            }
+          }
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.359375,
+          "y": 0.16665
+        },
+        "Size": {
+          "width": 0.239583,
+          "height": 0.33333
+        }
+      }
+    },
+    {
+      "title": "US Construction Spending",
+      "Encoding": {
+        "url": "../static/data/demo8/bar-1.csv",
+        "x": {
+          "field": "year",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Amount Spending",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        },
+        "color": {
+          "field": "symbol",
+          "datum": "nominal",
+          "legend": {
+            "title": null
+          },
+          "scale": {
+            "range": ["#f58518","#54a24b"]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "size": 15
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.739583,
+          "y": 0.16665
+        },
+        "Size": {
+          "width": 0.52083,
+          "height": 0.3333
+        }
+      }
+    },
+    {
+      "title": "US Residential Construction Spending",
+      "Encoding": {
+        "url": "../static/data/demo8/line-1.csv",
+        "x": {
+          "field": "Date",
+          "datum": "temporal",
+          "format": "%Y"
+        },
+        "y": {
+          "field": "Amount Spending",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        }
+      },
+      "ViewType": {
+        "type": "line",
+        "color": "#1f77b4"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.61979,
+          "y": 0.44444
+        },
+        "Size": {
+          "width": 0.76042,
+          "height": 0.22222
+        }
+      }
+    },
+    {
+      "title": "US Educational Construction Spending",
+      "Encoding": {
+        "url": "../static/data/demo8/line-2.csv",
+        "x": {
+          "field": "Date",
+          "datum": "temporal",
+          "format": "%Y"
+        },
+        "y": {
+          "field": "Amount Spending",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        }
+      },
+      "ViewType": {
+        "type": "line",
+        "color": "#02818a"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.61979,
+          "y": 0.66666
+        },
+        "Size": {
+          "width": 0.76042,
+          "height": 0.22222
+        }
+      }
+    },
+    {
+      "title": "US Highway Construction Spending",
+      "Encoding": {
+        "url": "../static/data/demo8/line-3.csv",
+        "x": {
+          "field": "Date",
+          "datum": "temporal",
+          "format": "%Y"
+        },
+        "y": {
+          "field": "Amount Spending",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        }
+      },
+      "ViewType": {
+        "type": "line",
+        "color": "#b15928"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.61979,
+          "y": 0.88888
+        },
+        "Size": {
+          "width": 0.76042,
+          "height": 0.22222
+        }
+      }
+    }
+  ]
+}

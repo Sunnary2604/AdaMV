@@ -1,0 +1,93 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "Interface": [
+    {
+      "transform": {
+        "data": {
+          "url": "us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        }
+      },
+      "title": "Household cats count around US",
+      "projection": {
+        "type": "albersUsa"
+      },
+      "ViewType": {
+        "type": "geoshape"
+      },
+      "Encoding": {
+        "url": "./demo6/map-1.csv",
+        "color": {
+          "field":"Cats",
+          "datum": "quantitative",
+          "legend": {
+            "format": "s"
+          },
+          "scale": {
+            "range": ["#c6dbef","#08519c"]
+          }
+        }
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.25
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.5
+        }
+      }
+    },
+    {
+      "title": "Household dogs count around US",
+      "transform": {
+        "data": {
+          "url": "./us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        }
+      },
+      "projection": {
+        "type": "albersUsa"
+      },
+      "ViewType": {
+        "type": "geoshape"
+      },
+      "Encoding": {
+        "url": "./demo6/map-2.csv",
+        "color": {
+          "field":"Dogs",
+          "datum": "quantitative",
+          "legend": {
+            "format": "s"
+          },
+          "scale": {
+            "range": ["#fed976","#e31a1c"]
+          }
+        }
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.75
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.5
+        }
+      }
+    }
+  ]
+}

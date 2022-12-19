@@ -1,0 +1,41 @@
+{
+  "Modality": {
+    "Interaction_modality": "phone",
+    "Size": {
+      "width": 375,
+      "height": 667
+    }
+  },
+  "Interface": [
+    {
+      "Encoding": {
+        "url": "demo1/table.csv",
+        "y": {
+          "field": "country",
+          "datum": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "Total cases (M)",
+          "datum": "quantitative",
+          "scale": {
+            "domain": [0,22]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "bar"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 1,
+          "height": 1
+        }
+      }
+    }
+  ]
+}

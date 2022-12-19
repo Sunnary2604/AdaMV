@@ -1,0 +1,246 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "Interface": [
+    {
+      "title": "Household with pets category %",
+      "Encoding": {
+        "url": "static/data/demo6/pie.csv",
+        "theta": {
+          "field": "Amount",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Category",
+          "datum": "nominal",
+          "legend": {
+            "title": null
+          }
+        }
+      },
+      "ViewType": {
+        "type": "arc"
+      },
+      "layer": [
+        {
+          "ViewType": {
+            "type": "arc"
+          }
+        },
+        {
+          "ViewType": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {
+              "field": "text",
+              "datum": "nominal"
+            }
+          }
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.125,
+          "y": 0.25
+        },
+        "Size": {
+          "width": 0.25,
+          "height": 0.5
+        }
+      }
+    },
+    {
+      "title": "Household with pets per category",
+      "Encoding": {
+        "url": "static/data/demo6/bar-1.csv",
+        "x": {
+          "field": "Category",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Amount",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        },
+        "color": {
+          "field": "Category",
+          "datum": "nominal",
+          "legend": null
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "size": 10
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.375,
+          "y": 0.25
+        },
+        "Size": {
+          "width": 0.25,
+          "height": 0.5
+        }
+      }
+    },
+    {
+      "title": "Cats vs Dogs population",
+      "Encoding": {
+        "url": "static/data/demo6/bar-2.csv",
+        "x": {
+          "field": "Category",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Amount",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        },
+        "color": {
+          "field": "Category",
+          "datum": "nominal",
+          "legend": null
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "size": 10
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.625,
+          "y": 0.25
+        },
+        "Size": {
+          "width": 0.25,
+          "height": 0.5
+        }
+      }
+    },
+    {
+      "title": "Cats vs Dogs average",
+      "Encoding": {
+        "url": "static/data/demo6/bar-3.csv",
+        "x": {
+          "field": "Category",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Average",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        },
+        "color": {
+          "field": "Category",
+          "datum": "nominal",
+          "legend": null
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "size": 10
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.875,
+          "y": 0.25
+        },
+        "Size": {
+          "width": 0.25,
+          "height": 0.5
+        }
+      }
+    },
+    {
+      "transform": {
+        "data": {
+          "url": "static/data/us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        }
+      },
+      "title": "Household cats count around US",
+      "projection": {
+        "type": "albersUsa"
+      },
+      "ViewType": {
+        "type": "geoshape"
+      },
+      "Encoding": {
+        "url": "static/data/demo6/map-1.csv",
+        "color": {
+          "field":"Cats",
+          "datum": "quantitative",
+          "legend": {
+            "format": "s"
+          },
+          "scale": {
+            "range": ["#c6dbef","#08519c"]
+          }
+        }
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.25,
+          "y": 0.75
+        },
+        "Size": {
+          "width": 0.5,
+          "height": 0.5
+        }
+      }
+    },
+    {
+      "title": "Household dogs count around US",
+      "transform": {
+        "data": {
+          "url": "static/data/us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        }
+      },
+      "projection": {
+        "type": "albersUsa"
+      },
+      "ViewType": {
+        "type": "geoshape"
+      },
+      "Encoding": {
+        "url": "static/data/demo6/map-2.csv",
+        "color": {
+          "field":"Dogs",
+          "datum": "quantitative",
+          "legend": {
+            "format": "s"
+          },
+          "scale": {
+            "range": ["#fed976","#e31a1c"]
+          }
+        }
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.75,
+          "y": 0.75
+        },
+        "Size": {
+          "width": 0.5,
+          "height": 0.5
+        }
+      }
+    }
+  ]
+}

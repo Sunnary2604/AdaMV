@@ -1,0 +1,21 @@
+Age,Movie number(K),Platform
+13+,0.383,Netflix
+18+,0.752,Netflix
+7+,0.323,Netflix
+18+,2.612,Prime Video
+13+,0.819,Prime Video
+all,0.13,Netflix
+13+,0.119,Hulu
+13+,0.04,Disney+
+7+,0.109,Hulu
+18+,0.003,Disney+
+7+,0.179,Disney+
+all,0.277,Disney+
+18+,0.29,Hulu
+7+,0.916,Prime Video
+16+,0.089,Netflix
+all,0.406,Prime Video
+all,0.055,Hulu
+16+,0.226,Prime Video
+16+,0.017,Hulu
+16+,0.001,Disney+

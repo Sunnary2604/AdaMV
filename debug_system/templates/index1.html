@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="static/pic/MVlogo.png" type="image/x-icon">
+    <title>Retargeting and Tailoring Multiple-View Visulization from the Desktop to Mobile Devices</title>
+    <link href="static/css/bootstrap-slider.css" rel="stylesheet">
+    <link href="static/css/highlight.css" rel="stylesheet">
+    <link href="static/css/bootstrap.css" rel="stylesheet" >
+    <link href="static/css/index1.css" rel="stylesheet" >
+     <link type="text/css" rel="stylesheet" href="static/css/alert.css" />
+<!--    <link href="static/css/boots.css" rel="stylesheet" >-->
+
+</head>
+<body>
+<div id="top" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <a class="brand" >Retargeting and Tailoring Multiple-View Visulization from the Desktop to Mobile Devices</a>
+        <ul class="nav pull-right">
+            <li><a  data-toggle="modal" onclick='$("#files").click();'><i class="icon-folder-open"></i> Json</a></li>
+            <input type="file" id="files" accept=".json" style="display: none" onchange="handleFiles();">
+            <li><a  data-toggle="modal" onclick="save()"><i class="icon-download-alt"></i> Save</a></li>
+            <li><a  data-toggle="dropdown"><i class="icon-question-sign"></i> Help</a></li>
+        </ul>
+    </div>
+</div>
+<div id="bottom">
+    <div id="panel" >
+        <div id="device-panel">
+            <h3>Output Device</h3>
+            <div class="output-line">
+                <span class="outputTitle">Model:</span>
+                <div id="outputdevices">
+                    <select id="devicesSelect" onchange="devicesSelectDisplay()">
+                        <option value="0">iPhone 7/8</option>
+                        <option value="1">iPhone X/XS/11/11 Pro</option>
+                        <option value="2">iPhone XR/11 Pro Max</option>
+                        <option value="3">iPad Mini/Air</option>
+                        <option value="4">Samsung Galaxy Tab</option>
+                        <!-- <option value="0">Galaxy S5</option>
+                        <option value="1">Pixel 2</option>
+                        <option value="2">Pixel 2 XL</option>
+                        <option value="3">iPhone 5/SE</option>
+                        <option value="4">iPhone 6/7/8</option>
+                        <option value="5">iPhone 6/7/8 Plus</option>
+                        <option value="6">iPhone X</option>
+                        <option value="7">iPad</option>
+                        <option value="8">iPad Pro</option> -->
+                    </select>
+                </div>
+            </div>
+            <div class="output-line">
+                <span class="outputTitle" >Size:</span>
+                <div id="outputSizeColumn">
+                    <input id= "outputwidth" type="text" name="fname" />
+                    <div id=outputMiddle>
+                        <img id="outputMiddleImg" width="20px" height="20px" src="static\pic\multiple.png">
+                    </div>
+                    <input id= "outputheight" type="text" name="lname" />
+                </div>
+
+            </div>
+            <div class="output-line">
+                <span class="outputTitle">Orientation:</span>
+                <div id="outputrotate">
+                    <select id="outputrotateSelect" onchange="rotateOutput()">
+                        <option value="0">Portrait</option>
+                        <option value="1">Landscape</option>
+                    </select>
+                    <!-- <img width="30px" height="30px" src="static\pic\screen-rotation.png" onclick="rotateOutput()"> -->
+                </div>
+            </div>
+            
+        </div>
+        <!-- <div id="device-panel"> -->
+            <!-- <h3>Output Device</h3> -->
+            <!-- <div class="output">
+                
+            </div> -->
+            <!-- <div class="device-content test-1">
+                <div class="output">
+                    <div class="output-device">
+                        <label class="label1">Device Number:</label>
+                        <input id="1" class="alignment"  onchange="function ()"/>
+                    </div>
+                    <div class="output-content" id="output1">
+                        <div id="vis" >
+                            <div class="list-group">
+                                <div class="list-group-item dropend">
+
+                                <span  class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 0">
+                                    <img class="leftrow " src="http://127.0.0.1:5000/static/pic/smallphone.png">Change Device
+                                    <img class="rightrow" src="http://127.0.0.1:5000/static/pic/rightrow.png">
+                                </span>
+                                        <ul class="dropdown-menu" display="block">
+                                        <li class="dropdown-item" id="changeI7" onclick="changBackground('changeI7')">iPhone 7/8 (375x667)</li>
+                                        <li class="dropdown-item" id="changeIX" onclick="changBackground('changeIX')">iPhone X/XS/11/11 Pro (375x812)</li>
+                                        <li class="dropdown-item" id="changeIXR" onclick="changBackground('changeIXR')">iPhone XR/11 Pro Max (414x896)</li>
+                                        <li class="dropdown-item" id="changeTablet" onclick="changBackground('changeTablet')">iPad Mini/Air (1024x768)</li>
+                                        <li class="dropdown-item" id="changeSam" onclick="changBackground('changeSam')">Samsung Galaxy Tab (1280x800)</li>
+                                    </ul>
+
+                                </div>
+                                <div class="list-group-item" id="rotate" onclick="Rotate()" style="text-align: left">
+                                    <img class="leftrow " src="http://127.0.0.1:5000/static/pic/smallrotate.png">Rotate</div>
+                            </div>
+                        </div>
+                                           <label class="label2">Panel: </label>
+
+                        <div class="output2">
+                            <div class="svg-panel">
+                                <svg id="output2-svg-panel">
+
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
+        <!-- </div> -->
+        <div id="layout-panel">
+            <h3>Layout Weight</h3>
+            <div class="layout-content test-1">
+                <div class="layout-content-content ">
+
+                    <div id="index-2">
+                        <div class="geometry-box">
+                            <span class="menu-title">Space utility</span>
+                            <div class="geometry-value">
+                            </div>
+
+                        </div>
+                        <div id="index-1">
+                        <div class="topology-box">
+                            <span class="menu-title">Topology</span>
+                            <div class="topology-value">
+                            </div>
+
+                        </div>
+                    </div>
+                        <div id="index-2-as">
+                            <span class="menu-title">Aspect Ratio</span>
+                            <div id="AS"></div>
+                        </div>
+                        <div id="index-2-rs">
+                            <span class="menu-title">Relative Size</span>
+                            <div id="RS"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <div class="box">
+
+            <div class="left-box">
+                <div class="left-content">
+                    <div class="left-top">INPUT</div>
+<!--                    <div class="input">-->
+                        <div class="input-content" id="desktop">
+                        </div>
+                        <div class="output-content-iphone" id="iphone">
+                        </div>
+<!--                    </div>-->
+                    <div class="left-middle">
+                        <div class="left-middle-content" id="left-middle-content1">
+                            <svg id="left"></svg>
+                            <div id="left-middle-content1-svg"></div>
+                        </div>
+                                      <div class="running">
+                                        <img src="static/pic/run.png" class="run" id="run" onclick="convert()">
+                                      </div>
+                    </div>
+                    <div class="left-bottom">
+                        <div class="left-bottom-content">
+                            <div id="left-bottom-title"></div>
+                            <div class="container">
+                                <div class="containerRow">
+                                    <span class="containerRowTitle"></span>
+                                    <span class="containerRowContent"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <div class="right-box-content">
+                    <div class="right-top">
+                        <div class="outputName">
+                            <p style="margin-left: 10px;">OUTPUT</p>
+                        </div>
+                        
+                    </div>
+<!--                    <div class="output-title" id="iphone">-->
+
+<!--                    </div>-->
+
+                    <div class="right-middle">
+                        <div class="right-middle-content" id="right-middle-content1">
+                            <svg id="right"></svg>
+                            <div id="right-middle-content1-svg"></div>
+                            <div class="svg-title">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-bottom">
+                        <div class="right-bottom-content" id="right-bottom-content1">
+                            <div id="right-bottom-title"></div>
+                            <div class="container"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="static/js/default.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+<script type="text/javascript" src="static/js.min/jquery-2.1.1.min.js"></script>
+<!--<script type="text/javascript" src="static/js.min/jquery-3.5.0.js"></script>-->
+<script type="text/javascript" src="static/js.min/d3.min.js"></script>
+<script type="text/javascript" src="static/js.min/bootstrap-slider.js"></script>
+<script type="text/javascript" src="static/js/outputPanel.js"></script>
+<script type="text/javascript" src="static/js.min/num-alignment.js"></script>
+<script type="text/javascript" src="static/js.min/common.js"></script>
+<script type="text/javascript" src="static/js.min/numberInput.js"></script>
+<script type="text/javascript" src="static/js.min/highlight.js"></script>
+<script type="text/javascript" src="static/js.min/snap.svg.js"></script>
+<script type="text/javascript" src="static/js.min/svg.draggable.js"></script>
+<script type="text/javascript" src="static/js.min/jquery.uiAlertView-1.0.0.js"></script>
+<script type="text/javascript" src="static/js.min/RangeSlider.js"></script>
+<!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"-->
+<!--      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+
+<!--<script type="text/javascript" src="static/js.min/svg.draggable.js"></script>-->
+<script type="text/javascript" src="static/js-vega/arrange.js"></script>
+<script type="text/javascript" src="static/js-vega/adjust_vl.js"></script>
+<script type="text/javascript" src="static/js-vega/adjust_svg.js"></script>
+<script type="text/javascript" src="static/js-vega/linking.js"></script>
+<!--<script type="text/javascript" src="static/js/data_reader.js"></script>-->
+<script type="text/javascript" src="static/js/vis.js"></script>
+<script type="text/javascript" src="static/js/convert.js"></script>
+<script type="text/javascript" src="static/js/inputData.js"></script>
+<script type="text/javascript" src="static/js/index.js"></script>
+<script type="text/javascript" src="static/js/singleViewDisplay.js"></script>
+<!--<script type="text/javascript" src="static/js/singleViewModify.js"></script>-->
+<!-- <script type="text/javascript" src="static/js/outputDevice.js"></script> -->
+<script type="text/javascript" src="static/js/operation.js"></script>
+
+<script>
+    //加减操作
+    // 自定义类型：参数为数组，可多条数据
+    // alignmentFns.createType([{"test": {"step": 10, "min": 10, "max": 999, "digit": 1}}]);
+    // 初始化
+    // alignmentFns.initialize();
+        // 销毁
+    alignmentFns.destroy();
+    // js动态改变数据
+    // $("#1").attr("data-max", "12")
+    // 初始化
+    alignmentFns.initialize();
+
+    let data;
+
+
+    //滑动条功能
+    function show(el1, el2) {
+        ran = document.getElementById(el1);
+        num = document.getElementById(el2);
+        num.value = ran.value;
+    }
+
+    // let backgroundToBox;
+
+    // backgroundToBox = backgroundView(backgroundTo.get('phone'), 'right');
+    //下拉输出设备功能
+    // $('#device').change(function () {
+    //     setBackground();
+    //     backgroundToBox = backgroundView(backgroundTo.get($('#device').val()), 'right');
+    //     if (inputDataFlag && rotate) {
+    //         isRotate();
+    //     }
+    // });
+
+    function input(d) {
+        a=d.Interaction_modality;
+        b=d.Size.width;
+        c=d.Size.height;
+        $("#desktop").empty();
+        $("#desktop").append("<div>"+a+"&nbsp("+b+"x"+c+")</div>");
+    }
+
+
+    // dyDropDown(2);
+
+
+    // let rotate = false;
+    // let inputDataFlag = false;
+    // let box;
+    // $(".function_img_rotate").click(function () {//点击旋转按钮，实现旋转
+    //
+    //     rotate = !rotate;
+    //     if (rotate) {
+    //         $(".function_img_rotate").css('background-color', 'red');
+    //     } else {
+    //         $(".function_img_rotate").css('background-color', '');
+    //         setBackground();
+    //         backgroundToBox = backgroundView(backgroundTo.get($('#device').val()), 'right');
+    //     }
+    //     if (inputDataFlag && rotate) {
+    //         isRotate();
+    //     }
+    //
+    // });
+
+    // function rotateFunction() {
+    //     d3.select('#right').selectAll('.view').remove();
+    //     let reviseBackground = backgroundTo.get($('#device').val());
+    //     let w = reviseBackground.width;
+    //     reviseBackground.width = reviseBackground.height;
+    //     reviseBackground.height = w;
+    //     backgroundTo.set($('#device').val(), reviseBackground);
+    //     let rect_x = parseFloat(d3.select('#right').select('rect').attr('x'));
+    //     let rect_y = parseFloat(d3.select('#right').select('rect').attr('y'));
+    //     let rect_w = parseFloat(d3.select('#right').select('rect').attr('width'));
+    //     let rect_h = parseFloat(d3.select('#right').select('rect').attr('height'));
+    //     let rect_center_x = rect_x + rect_w / 2;
+    //     let rect_center_y = rect_y + rect_h / 2;
+    //     d3.select('#right').select('g').attr("transform", "rotate(-90," + rect_center_x + "," + rect_center_y + ")");
+    //     let temp_x = backgroundToBox[0] + backgroundToBox[2];
+    //     let temp_y = backgroundToBox[1];
+    //     backgroundToBox[0] = rect_center_x - (rect_center_y - temp_y);
+    //     backgroundToBox[1] = rect_center_y - (temp_x - rect_center_x);
+    //     let temp_w = backgroundToBox[2];
+    //     backgroundToBox[2] = backgroundToBox[3];
+    //     backgroundToBox[3] = temp_w;
+    // }
+
+
+
+</script>
+</html>

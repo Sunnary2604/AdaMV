@@ -1,0 +1,168 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 667,
+      "height": 375
+    }
+  },
+  "Interface": [
+    {
+      "Encoding":[
+        {
+          "projection": {
+            "type":"mercator"
+          },
+          "url": "./country-110m.json",
+          "feature": "countries"
+        },
+        {
+          "url": "./demo1/map.csv",
+          "x": {
+            "field": "Long",
+            "datum": "quantitative"
+          },
+          "y": {
+            "field": "Lat",
+            "datum": "quantitative"
+          },
+          "size":{
+            "field":"Total cases",
+            "datum": "quantitative",
+            "legend": {
+              "format": "~s"
+            }
+          }
+        }
+      ],
+      "ViewType": [
+        {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        },
+        {
+          "type": "circle",
+          "color": "red"
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.34177,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 0.683544,
+          "height": 1
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "demo1/world-covid-data.csv",
+        "x": {
+          "field": "date",
+          "datum": "temporal",
+          "format": "%b"
+        },
+        "y": {
+          "field": "Total cases and total deaths (M)",
+          "datum": "quantitative",
+          "title": null,
+          "format": "s"
+        },
+        "color": {
+          "field": "Symbol",
+          "datum": "nominal"
+        }
+      },
+      "ViewType": {
+        "type": "line"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.8417721,
+          "y": 0.164
+        },
+        "Size": {
+          "width": 0.3164557,
+          "height": 0.3333
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "./demo1/plot-covid-data.csv",
+        "x": {
+          "field": "Total cases (lg)",
+          "datum": "quantitative"
+        },
+        "y": {
+          "field": "Total deaths (lg)",
+          "datum": "quantitative"
+        }
+      },
+      "ViewType": {
+        "type": "circle"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.8417721,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 0.3164557,
+          "height": 0.33333
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "./demo1/pie-covid-data.csv",
+        "theta": {
+          "field": "cases",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Continent",
+          "datum": "nominal"
+        }
+      },
+      "ViewType": {
+        "type": "arc"
+      },
+      "layer": [
+        {
+          "ViewType": {
+            "type": "arc"
+          }
+        },
+        {
+          "ViewType": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {
+              "field": "percentage",
+              "datum": "nominal"
+            }
+          }
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.8417721,
+          "y": 0.83333
+        },
+        "Size": {
+          "width": 0.3164557,
+          "height": 0.33333
+        }
+      }
+    }
+  ],
+  "linking": {
+    "views":[0,1,3],
+    "index": "country"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "Interface": [
+    {
+      "title": "Top20 countries",
+      "Encoding": {
+        "url": "static/data/demo1/table.csv",
+        "x": {
+          "field": "country",
+          "datum": "nominal",
+          "sort": "-y"
+        },
+        "y": {
+          "field": "total cases(M)",
+          "datum": "quantitative",
+          "domain": [0,22]
+        }
+      },
+      "ViewType": {
+        "type": "bar"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.25,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 0.5,
+          "height": 1
+        }
+      }
+    },
+    {
+      "Encoding":[
+        {
+          "projection": {
+            "type":"mercator"
+          },
+          "url": "static/data/country-110m.json",
+          "feature": "countries"
+        },
+        {
+          "url": "static/data/demo1/map.csv",
+          "x": {
+            "field": "Long",
+            "datum": "quantitative"
+          },
+          "y": {
+            "field": "Lat",
+            "datum": "quantitative"
+          },
+          "size":{
+            "field":"total cases",
+            "datum": "quantitative"
+          }
+        }
+      ],
+      "ViewType": [
+        {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        },
+        {
+          "type": "circle",
+          "color": "red"
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.75,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 0.5,
+          "height": 1
+        }
+      }
+    }
+  ]
+}

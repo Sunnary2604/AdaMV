@@ -1,0 +1,91 @@
+{
+  "Modality": {
+    "Interaction_modality": "phone",
+    "Size": {
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "Interface": [
+    {
+      "Encoding": {
+        "url": "demo1/table.csv",
+        "x": {
+          "field": "country",
+          "datum": "nominal",
+          "sort": "-y"
+        },
+        "y": {
+          "field": "Total cases (M)",
+          "datum": "quantitative",
+          "scale": {
+            "domain": [0,22]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "bar"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.125
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.25
+        }
+      }
+    },
+    {
+      "Encoding":[
+        {
+          "projection": {
+            "type":"mercator"
+          },
+          "url": "country-110m.json",
+          "feature": "countries"
+        },
+        {
+          "url": "demo1/map.csv",
+          "x": {
+            "field": "Long",
+            "datum": "quantitative"
+          },
+          "y": {
+            "field": "Lat",
+            "datum": "quantitative"
+          },
+          "size":{
+            "field":"Total cases",
+            "datum": "quantitative",
+            "legend": {
+              "format": "~s"
+            }
+          }
+        }
+      ],
+      "ViewType": [
+        {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        },
+        {
+          "type": "circle",
+          "color": "red"
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.625
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.75
+        }
+      }
+    }
+  ]
+}

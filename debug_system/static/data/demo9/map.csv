@@ -1,0 +1,49 @@
+States,Number,abbr,id
+Alabama,279,AL,1
+Arkansas,140,AR,5
+Arizona,298,AZ,4
+California,3026,CA,6
+Colorado,1146,CO,8
+Connecticut,328,CT,9
+Delaware,66,DE,10
+Florida,2239,FL,12
+Georgia,490,GA,13
+Iowa,221,IA,19
+Idaho,114,ID,16
+Illinois,1088,IL,17
+Indiana,412,IN,18
+Kansas,153,KS,20
+Kentucky,503,KY,21
+Louisiana,371,LA,22
+Massachusetts,559,MA,25
+Maryland,307,MD,24
+Maine,125,ME,23
+Michigan,925,MI,26
+Minnesota,434,MN,27
+Missouri,890,MO,29
+Mississippi,186,MS,28
+Montana,89,MT,30
+North Carolina,558,NC,37
+North Dakota,191,ND,38
+Nebraska,441,NE,31
+New Hampshire,165,NH,33
+New Jersey,874,NJ,34
+New Mexico,104,NM,35
+Nevada,74,NV,32
+New York,2140,NY,36
+Ohio,1107,OH,39
+Oklahoma,340,OK,40
+Oregon,676,OR,41
+Pennsylvania,1286,PA,42
+Rhode Island,209,RI,44
+South Carolina,119,SC,45
+South Dakota,107,SD,46
+Tennessee,498,TN,47
+Texas,2306,TX,48
+Utah,663,UT,49
+Virginia,373,VA,51
+Vermont,73,VT,50
+Washington,549,WA,53
+Wisconsin,477,WI,55
+West Virginia,119,WV,54
+Wyoming,50,WY,56

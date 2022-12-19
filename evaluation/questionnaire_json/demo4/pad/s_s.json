@@ -1,0 +1,115 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 768,
+      "height": 1024
+    }
+  },
+  "Interface": [
+    {
+      "Encoding": {
+        "url": "json_data/demo4/pie.csv",
+        "theta": {
+          "field": "Count",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Medal",
+          "datum": "nominal",
+          "scale": ["#9A3F1A","#C69247","#C2C2C2"]
+        }
+      },
+      "ViewType": {
+        "type":  "arc"
+      },
+      "layer": [
+        {
+          "ViewType": {
+            "type": "arc"
+          }
+        },
+        {
+          "ViewType": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {
+              "field": "Count",
+              "datum": "nominal"
+            }
+          }
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.166667,
+          "y": 0.25
+        },
+        "Size": {
+          "width": 0.33333,
+          "height": 0.5
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "json_data/demo4/line.csv",
+        "x": {
+          "field": "Date",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Medal Count",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Medal",
+          "datum": "nominal",
+          "scale": ["#9A3F1A","#C69247","#C2C2C2"]
+        }
+      },
+      "ViewType": {
+        "type": "line"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.666667,
+          "y": 0.25
+        },
+        "Size": {
+          "width": 0.666667,
+          "height": 0.5
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "json_data/demo4/bar.csv",
+        "x": {
+          "field": "Country",
+          "datum": "nominal",
+          "sort": "-y"
+        },
+        "y": {
+          "field": "Medal Count",
+          "datum": "quantitative"
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "color": "#675193"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.75
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.5
+        }
+      }
+    }
+  ]
+}

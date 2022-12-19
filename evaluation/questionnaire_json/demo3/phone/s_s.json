@@ -1,0 +1,178 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 375,
+      "height": 667
+    }
+  },
+  "Interface": [
+    {
+      "Encoding":[
+        {
+          "projection": {
+            "type":"equirectangular"
+          },
+          "url": "country-110m.json",
+          "feature": "countries"
+        },
+        {
+          "url": "json_data/demo3/map.csv",
+          "x": {
+            "field": "Long",
+            "datum": "quantitative"
+          },
+          "y": {
+            "field": "Lat",
+            "datum": "quantitative"
+          },
+          "color":{
+            "field":"deaths per million",
+            "datum": "quantitative",
+            "scale": ["#9ecae1","#08306b"]
+          }
+        }
+      ],
+      "ViewType": [
+        {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        },
+        {
+          "type": "circle"
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.375,
+          "y": 0.33333
+        },
+        "Size": {
+          "width": 0.75,
+          "height": 0.66666
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "json_data/demo3/area_1.csv",
+        "x": {
+          "field": "date",
+          "datum": "temporal",
+          "timeUnit": {
+            "unit": "year",
+            "step": 10
+          }
+        },
+        "y": {
+          "field": "deaths number(M)",
+          "datum": "quantitative"
+        }
+      },
+      "ViewType": {
+        "type":  "area",
+        "color": "#f58518"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.125,
+          "y": 0.83333
+        },
+        "Size": {
+          "width": 0.25,
+          "height": 0.33333
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "json_data/demo3/area_2.csv",
+        "x": {
+          "field": "date",
+          "datum": "temporal",
+          "timeUnit": {
+            "unit": "year",
+            "step": 10
+          }
+        },
+        "y": {
+          "field": "deaths per million",
+          "datum": "quantitative"
+        }
+      },
+      "ViewType": {
+        "type": "area",
+        "color": "#4c78a8"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.375,
+          "y": 0.83333
+        },
+        "Size": {
+          "width": 0.25,
+          "height": 0.33333
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "json_data/demo3/age.csv",
+        "y": {
+          "field": "Age",
+          "datum": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "Number of Deaths(M)",
+          "datum": "quantitative"
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "color": "#f58518"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.875,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 0.25,
+          "height": 1
+        }
+      }
+    },
+    {
+      "Encoding": {
+        "url": "json_data/demo3/gender.csv",
+        "x": {
+          "field": "gender",
+          "datum": "nominal"
+        },
+        "y": {
+          "field": "Number of Deaths(M)",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "gender",
+          "datum": "nominal"
+        }
+      },
+      "ViewType": {
+        "type": "bar"
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.625,
+          "y": 0.83333
+        },
+        "Size": {
+          "width": 0.25,
+          "height": 0.3333
+        }
+      }
+    }
+  ]
+}

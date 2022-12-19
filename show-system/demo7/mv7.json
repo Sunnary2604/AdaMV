@@ -1,0 +1,179 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "Interface": [
+    {
+      "title": "Male and Female Proportion",
+      "Encoding": {
+        "url": "./demo7/csv/pie.csv",
+        "theta": {
+          "field": "number",
+          "datum": "quantitative"
+        },
+        "color": {
+          "field": "Gender",
+          "datum": "nominal",
+          "legend": {
+            "title": null
+          },
+          "scale": {
+            "range": ["#ff7f00","#377eb8"]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "arc"
+      },
+      "layer": [
+        {
+          "ViewType": {
+            "type": "arc"
+          }
+        },
+        {
+          "ViewType": {
+            "type": "text"
+          },
+          "encoding": {
+            "text": {
+              "field": "text",
+              "datum": "nominal"
+            }
+          }
+        }
+      ],
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.135415,
+          "y": 0.274074
+        },
+        "Size": {
+          "width": 0.27083,
+          "height": 0.548148
+        }
+      }
+    },
+    {
+      "transform": {
+        "data": {
+          "url": "us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        }
+      },
+      "title": "Top female baby names in each state",
+      "projection": {
+        "type": "albersUsa"
+      },
+      "ViewType": {
+        "type": "geoshape"
+      },
+      "Encoding": {
+        "url": "./demo7/csv/map_F.csv",
+        "color": {
+          "field":"Female",
+          "datum": "nominal",
+          "scale": {
+            "range": ["#fdb475","#e85e0f"]
+          }
+        }
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.453125,
+          "y": 0.274074
+        },
+        "Size": {
+          "width": 0.3645833,
+          "height": 0.548148
+        }
+      }
+    },
+    {
+      "transform": {
+        "data": {
+          "url": "us-10m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        }
+      },
+      "title": "Top male baby names in each state",
+      "projection": {
+        "type": "albersUsa"
+      },
+      "ViewType": {
+        "type": "geoshape"
+      },
+      "Encoding": {
+        "url": "./demo7/csv/map_M.csv",
+        "color": {
+          "field":"Male",
+          "datum": "nominal",
+          "scale": {
+            "range": ["#a6bddb","#74a9cf","#3690c0","#0570b0"]
+          }
+        }
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.81770833,
+          "y": 0.274074
+        },
+        "Size": {
+          "width": 0.3645833,
+          "height": 0.548148
+        }
+      }
+    },
+    {
+      "title": "Top 20 baby name in US",
+      "Encoding": {
+        "url": "./demo7/csv/bar.csv",
+        "x": {
+          "field": "Top_name",
+          "datum": "nominal",
+          "sort": "-y"
+        },
+        "y": {
+          "field": "number",
+          "datum": "quantitative",
+          "format": "s",
+          "title": null
+        },
+        "color": {
+          "field": "Gender",
+          "datum": "nominal",
+          "legend": {
+            "orient": "top-right"
+          },
+          "scale": {
+            "range": ["#ff7f00","#377eb8"]
+          }
+        }
+      },
+      "ViewType": {
+        "type": "bar",
+        "size": 80
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.754074
+        },
+        "Size": {
+          "width": 1,
+          "height": 0.451852
+        }
+      }
+    }
+  ]
+}

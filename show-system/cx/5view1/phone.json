@@ -1,0 +1,54 @@
+{
+  "Modality": {
+    "Interaction_modality": "desktop",
+    "Size": {
+      "width": 375,
+      "height": 667
+    }
+  },
+  "Interface": [
+    {
+      "title": "Deaths per million around the world",
+      "transform": {
+        "data": {
+          "url": "country-110m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "countries"
+          }
+        }
+      },
+      "projection": {
+        "type": "equirectangular"
+      },
+      "ViewType": {
+        "type": "geoshape",
+        "stroke": "black"
+      },
+      "Encoding": {
+        "url": "demo4/map.csv",
+        "color": {
+          "field":"Deaths per million",
+          "datum": "quantitative",
+          "legend": {
+            "format": "s",
+            "title": null
+          },
+          "scale": {
+            "range": ["#fed976","#bd0026"]
+          }
+        }
+      },
+      "BoundingBox": {
+        "CenterPosition": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "Size": {
+          "width": 1,
+          "height": 1
+        }
+      }
+    }
+  ]
+}

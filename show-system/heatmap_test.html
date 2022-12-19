@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedding Vega-Lite</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+<body>
+<div id="vis"></div>
+
+<script type="text/javascript">
+    let yourVlSpec = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+        "data": {
+            "url": "./pie-covid-data.csv"
+        },
+        "width": 500,
+        "height": 500,
+        "mark": "rect",
+        "encoding":{
+            "x":{
+                "bin": {"maxbins": 60},
+                "field":"total cases",
+                "type":"quantitative"
+            },
+            "y":{
+                "bin": {"maxbins": 40},
+                "field":"total deaths",
+                "type":"quantitative"
+            },
+            "color":{
+                "aggregate": "count",
+                "type":"quantitative"
+            }
+        }
+    };
+    vegaEmbed('#vis', yourVlSpec);
+</script>
+</body>
+</html>
