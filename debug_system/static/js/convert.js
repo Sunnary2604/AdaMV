@@ -1,6 +1,11 @@
 //Convert function Calculation of indicators from one device to another
 let rightData;
+
 function convert() {
+  document.getElementById("loading").style =
+    "-webkit-animation: load 1.1s infinite linear;";
+  document.getElementById("run").style = "display:none";
+
   //Get weight
   let sU = parseInt(document.getElementById("index_SU").value);
   let iF = parseInt(document.getElementById("index_IF").value);
@@ -50,6 +55,8 @@ function convert() {
     contentType: "application/json; charset=UTF-8",
     data: Udata,
     success: function (item) {
+      document.getElementById("run").style = "";
+      document.getElementById("loading").style = "display:none";
       // right-end interface data returned by the back-end (here data is a json object)
       backgroundInfo.clear();
       recordInterfaceViewState("right", item);
@@ -60,6 +67,8 @@ function convert() {
       }
     },
     error: function () {
+      document.getElementById("run").style = "";
+      document.getElementById("loading").style = "display:none";
       alert("error");
     },
   });
