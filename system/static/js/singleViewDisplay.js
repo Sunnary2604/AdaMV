@@ -1062,7 +1062,7 @@ function viewType(viewRes, viewId, boxId) {
       boxId +
       '">\n' +
       "Mark Type:&nbsp;" +
-      '<img class="leftrow " src="http://127.0.0.1:5000/static/pic/chart ' +
+      '<img class="leftrow " src="http://hkust-cival.com:5000/static/pic/chart ' +
       type +
       '.png">' +
       type +

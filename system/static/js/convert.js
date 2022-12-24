@@ -50,7 +50,8 @@ function convert() {
     resultVega: res,
   });
   $.ajax({
-    url: "http://127.0.0.1:5000/adaption",
+    // url: "http://127.0.0.1:5000/adaption",
+    url: "http://hkust-cival.com:5000/adaption",
     type: "post",
     contentType: "application/json; charset=UTF-8",
     data: Udata,
